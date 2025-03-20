@@ -1,11 +1,43 @@
-/* 
-
-    You can write your own styles here...
+main{
     
+    height: 200vh;
+}
+.p-box{
+    border: 1px solid black;
+    width: 15px;
+    height: 180px;
+    margin: 0px auto;
+    background-color: black;
     
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+}
+.box-light{
+    border: 1px solid black;
+    width: 400px;
+    margin: 0px auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:row;
+    border-radius: 15px;
+    background-color: black;
+    padding: 10px;
+}
+.box-light div{
+    border: 0px solid black;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.light-on {
+    box-shadow: 0px 0px 50px 20px rgb(219, 241, 190);
+}

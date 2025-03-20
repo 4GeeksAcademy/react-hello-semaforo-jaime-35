@@ -1,28 +1,33 @@
-import React from "react";
+import React, { useState, } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+  const [selected, setSelected] = useState("red");
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+  const changeColor = (color) => {
+    setSelected(color);
+  };
 
+  return (
+    <main className="position-relative"  style={{
+		backgroundImage: `url('https://img.freepik.com/fotos-premium/grupo-personas-multietnicas-que-cruzan-calle-ciudad-paso-peatones-horizontal-utilizando-ia-generativa_28914-8168.jpg?w=2000')`,
+		backgroundSize: "cover",
+		backgroundPosition: "center",
+		height: "100vh",
+		width: "100vw"
+	  }}>
+		
+		<div className="p-box"></div>
+		<div className="box-light">
+			<div className={`red ${ selected == "red" ? "light-on" : ""}`}
+			onClick={()=> changeColor("red")}></div>
+			<div className={`yellow ${ selected == "yellow" ? "light-on" : ""}`}
+			onClick={()=> changeColor("yellow")}></div>
+			<div className={`green ${ selected == "green" ? "light-on" : ""}`}
+			onClick={()=> changeColor("green")}></div>
+        </div>
+		
+       
+     </main>
+  )
+}
 export default Home;
